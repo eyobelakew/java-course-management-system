@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+    <children>
+        <TextField fx:id="txtCourseID" layoutX="70.0" layoutY="50.0" promptText="Course ID" />
+        <TextField fx:id="txtCourseName" layoutX="70.0" layoutY="100.0" promptText="Course Name" />
+        <TextField fx:id="txtInstructorName" layoutX="70.0" layoutY="150.0" promptText="Instructor Name" />
+        <TextField fx:id="txtDuration" layoutX="70.0" layoutY="200.0" promptText="Duration (Weeks)" />
+        <TextField fx:id="txtCredits" layoutX="70.0" layoutY="250.0" promptText="Credits" />
+
+        <Button fx:id="btnAdd" layoutX="70.0" layoutY="300.0" text="Add" onAction="#handleAdd" />
+        <Button fx:id="btnUpdate" layoutX="150.0" layoutY="300.0" text="Update" onAction="#handleUpdate" />
+        <Button fx:id="btnDelete" layoutX="230.0" layoutY="300.0" text="Delete" onAction="#handleDelete" />
+
+        <TableView fx:id="tableCourses" layoutX="400.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="colCourseID" text="Course ID" />
+                <TableColumn fx:id="colCourseName" text="Course Name" />
+                <TableColumn fx:id="colInstructorName" text="Instructor Name" />
+                <TableColumn fx:id="colDuration" text="Duration" />
+                <TableColumn fx:id="colCredits" text="Credits" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
